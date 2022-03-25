@@ -49,6 +49,14 @@ margin-left: 25px;
 margin-right: 25px;
 `
 
+// export const Status = styled.div`
+// background-color: ${props => {
+//     if (props.status === item.isOnline) {
+//         return 'green'
+//     }
+//     return 'red'
+// }};`
+
 
 
 
