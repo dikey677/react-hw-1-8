@@ -49,20 +49,12 @@ margin-left: 25px;
 margin-right: 25px;
 `
 
-// export const Chip = styled.span`
-// width: 15px;
-// height: 15px;
 
-// border-radius: 50%;
-// margin-left: 25px;
-// margin-right: 25px;
 
-// background-color: $(props => {
-//     switch (props.type) {
-//         case 'online':
-//             return 'green';
-//         case 'offline':
-//             return 'red';
-//     }
-// });
-// `;
+
+
+// export const Online = styled.div`
+// background-color: green;`
+
+// export const Offline = styled.div`
+// background-color: red;`
