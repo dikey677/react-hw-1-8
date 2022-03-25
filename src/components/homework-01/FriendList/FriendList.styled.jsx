@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import { type } from "@testing-library/user-event/dist/type"
 
 export const UL = styled.ul`
 display: flex;
@@ -31,38 +32,19 @@ border-radius: 5px;
 box-shadow: 2px 2px 2px black;
 `
 
-export const Online = styled.div`
+
+export const StatusOnline = styled.div`
 width: 15px;
 height: 15px;
-background-color: green;
 border-radius: 50%;
 margin-left: 25px;
 margin-right: 25px;
-`
 
-export const Offline = styled.div`
-width: 15px;
-height: 15px;
-background-color: red;
-border-radius: 50%;
-margin-left: 25px;
-margin-right: 25px;
-`
+background-color: ${props => {
+    console.log(props.eventType)
 
-// export const Status = styled.div`
-// background-color: ${props => {
-//     if (props.status === item.isOnline) {
-//         return 'green'
-//     }
-//     return 'red'
-// }};`
+    if (props.eventType) {
+        return 'green';
+    } else { return 'tomato' };
+}};`
 
-
-
-
-
-// export const Online = styled.div`
-// background-color: green;`
-
-// export const Offline = styled.div`
-// background-color: red;`

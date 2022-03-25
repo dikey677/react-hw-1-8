@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
-import { UL, LI, Online, Offline, Name, Img } from "./FriendList.styled";
+import { UL, LI, StatusOnline, Name, Img } from "./FriendList.styled";
 
-export default function FriendList({ friends }, status) {
+export default function FriendList({ friends }) {
   return (
     <UL>
-      {friends.map((item, status) => (
-        <LI key={item.id} status={item.isOnline}>
-          <span>{item.isOnline ? <Online /> : <Offline />}</span>
+      {friends.map((item) => (
+        <LI key={item.id}>
+          <StatusOnline eventType={item.isOnline} />
           <Img
             className="avatar"
             src={item.avatar}
@@ -20,4 +20,4 @@ export default function FriendList({ friends }, status) {
   );
 }
 
-// {item.isOnline ? <Online /> : <Offline />}
+// <span>{item.isOnline ? <Online /> : <Offline />}</span>
