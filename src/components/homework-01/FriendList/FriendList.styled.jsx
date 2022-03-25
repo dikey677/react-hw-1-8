@@ -32,7 +32,6 @@ border-radius: 5px;
 box-shadow: 2px 2px 2px black;
 `
 
-
 export const StatusOnline = styled.div`
 width: 15px;
 height: 15px;
@@ -41,9 +40,7 @@ margin-left: 25px;
 margin-right: 25px;
 
 background-color: ${props => {
-    console.log(props.eventType)
-
-    if (props.eventType) {
+        if (props.eventType) {
         return 'green';
     } else { return 'tomato' };
 }};`
